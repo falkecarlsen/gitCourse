@@ -4,7 +4,7 @@
 typedef struct vector{
     double x;
     double y;
-}vector;
+} vector;
 
 double vector_dot(vector vector_1, vector vector_2);
 vector vector_add(vector vector_1, vector vector_2);
@@ -13,7 +13,6 @@ void vector_print(vector a);
 int main(void) {
 
     vector a, b, c, d;
-    double dot;
     
     a.x = 5;
     a.y = 4;
@@ -25,8 +24,6 @@ int main(void) {
     
     /* d = vector_scale(a, 3); */
     
-    dot = vector_dot(a, c);
-    
     printf("a: "); vector_print(a);
     printf("\nb: "); vector_print(b);
     printf("\nc: "); vector_print(c);
@@ -37,20 +34,16 @@ int main(void) {
 }
 
 double vector_dot(vector vector_1, vector vector_2){
-    double result;
-    result = vector_1.x * vector_2.x + vector_1.y * vector_2.y;
-    return result;
+    return vector_1.x * vector_2.x + vector_1.y * vector_2.y;
 }
 
 vector vector_add(vector vector_1, vector vector_2) {
-  vector result;
-  result.x = (vector_1.x + vector_2.x);
-  result.y = (vector_1.y + vector_2.y);
-  return result;
+    vector result;
+    result.x = (vector_1.x + vector_2.x);
+    result.y = (vector_1.y + vector_2.y);
+    return result;
 }
 
-
 void vector_print(vector a){ /*printer vector a*/
-  
-  printf("(%f,%f)", a.x, a.y);
+    printf("(%f,%f)", a.x, a.y);
 }
