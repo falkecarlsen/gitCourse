@@ -44,6 +44,12 @@ vector vector_add(vector vector_1, vector vector_2) {
     return result;
 }
 
+vector vector_scale(vector a, double n) {
+    a.x *= n;
+    a.y *= n;
+    return a;
+}
+
 void vector_print(vector a){ /*printer vector a*/
     printf("(%f,%f)", a.x, a.y);
 }
