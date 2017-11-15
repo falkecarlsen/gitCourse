@@ -7,7 +7,7 @@ typedef struct vector{
 }vector;
 
 double dotproduct(vector vector_1, vector vector_2);
-int vector_add(vector vector_1, vector vector_2);
+vector vector_add(vector vector_1, vector vector_2);
 void vector_print(vector a);
 
 int main(void) {
@@ -25,13 +25,13 @@ int main(void) {
     
     /* d = vector_scale(a, 3); */
     
-    dot = vector_dot(a, c);
+    dot = dotproduct(a, c);
     
     /* printf("a: "); vector_print(a); */
     /* printf("\nb: "); vector_print(b); */
     /* printf("\nc: "); vector_print(c); */
     /* printf("\nd: "); vector_print(d); */
-    printf("\na dot c: %d\n", dotproduct(a, c));
+    printf("\na dot c: %f\n", dotproduct(a, c));
 
     return 0;
 }
@@ -42,11 +42,12 @@ double dotproduct(vector vector_1, vector vector_2){
     return result;
 }
 
-int vector_add(vector vector_1, vector vector_2) {
+vector vector_add(vector vector_1, vector vector_2) {
 
-  int result;
-  result = (vector_1.x + vector_1.y) + (vector_2.x + vector_2.y);
-  return result;  
+  vector result;
+  result.x = (vector_1.x + vector_2.x);
+  result.y = (vector_1.y + vector_2.y);
+  return result;
 }
 
 
