@@ -8,6 +8,7 @@ typedef struct vector{
 
 double dotproduct(vector vector_1, vector vector_2);
 int vector_add(vector vector_1, vector vector_2);
+void vector_print(vector a);
 
 int main(void) {
 
@@ -46,4 +47,12 @@ int vector_add(vector vector_1, vector vector_2) {
   int result;
   result = (vector_1.x + vector_1.y) + (vector_2.x + vector_2.y);
   return result;  
+}
+
+
+void vector_print(vector a){ /*printer vector a*/
+  
+  printf("(%f,%f)", a.x, a.y);
+  
+  
 }
