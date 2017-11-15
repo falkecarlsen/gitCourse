@@ -22,7 +22,7 @@ int main(void) {
     
     c = vector_add(a, b);
     
-    /* d = vector_scale(a, 3); */
+    d = vector_scale(a, 3);
     
     printf("a: "); vector_print(a);
     printf("\nb: "); vector_print(b);
