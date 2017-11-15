@@ -8,6 +8,7 @@ typedef struct vector{
 
 double vector_dot(vector vector_1, vector vector_2);
 vector vector_add(vector vector_1, vector vector_2);
+vector vector_scale(vector a, double n);
 void vector_print(vector a);
 
 int main(void) {
