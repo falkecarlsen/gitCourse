@@ -52,5 +52,5 @@ vector vector_scale(vector a, double n) {
 }
 
 void vector_print(vector a){ /*printer vector a*/
-    printf("(%f,%f)", a.x, a.y);
+    printf("(%2f,%2f)", a.x, a.y);
 }
